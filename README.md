@@ -14,7 +14,7 @@ Check out the project live: [Visit Egypt](https://visit-egypt-6x87.vercel.app/)
 ### 1️⃣ Open Locally
 1. Download or clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone <[repository-url](https://github.com/mohameedramzy/Visit-Egypt.git)>
    ```
 2. Open `index.html` in your browser.
 
