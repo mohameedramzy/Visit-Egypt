@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Egypt</title>
+    <style>
+      /* General Styles */
+body {
+    background-color: #1E2A5E;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(213, 153, 3);
+}
+
+p {
+    color: #E1D7B7;
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #7C93C3;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: left;
+    vertical-align: middle;
+    width: 25%;
+}
+
+/* Images */
+td img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+
+/* للأحجام الصغيرة (أقل من 1024px) */
+@media (max-width: 1024px) {
+    td {
+        width: 50%; /* كل خلية تأخذ نصف العرض */
+    }
+
+    td img {
+        height: 180px;
+    }
+}
+
+/* للأجهزة اللوحية (أقل من 768px) */
+@media (max-width: 768px) {
+    table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    td {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    td img {
+        width: 80%;
+        height: auto;
+        margin-top: 10px;
+    }
+}
+
+/* للهواتف الصغيرة (أقل من 425px) */
+@media (max-width: 425px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    td {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    td img {
+        width: 90%;
+        max-height: 160px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Visit Egypt</h1>
+    <p>Welcome to Egypt, a land of timeless wonders where ancient history and vibrant culture come together to create an unforgettable experience.</p>
+
+    <table>
+        <tr>
+            <td style="padding: 10px;">Located in Giza, these are among the Seven Wonders of the Ancient World. You can visit the Great Pyramid of Giza, the Pyramid of Khafre, the Pyramid of Menkaure, and the famous Sphinx.</td>
+            <td><img src="image/pexels-walter-galvis-1593712004-28013730.jpg" alt="The Pyramids and the Sphinx"></td>
+            <td style="padding: 10px;">This city is home to many magnificent ancient sites such as the Karnak Temple, the Luxor Temple, and the Valley of the Kings where you can explore the tombs of pharaohs. The Temple of Hatshepsut is also worth a visit.</td>
+            <td><img src="image/download.jpeg" alt="Luxor Temple"></td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;">The capital city offers many landmarks, including the Egyptian Museum with its extensive collection of ancient artifacts, the Citadel of Saladin, and the bustling Khan El Khalili market.</td>
+            <td><img src="image/istockphoto-1180786967-612x612.jpg" alt="Cairo"></td>
+            <td style="padding: 10px;">Known for its coastal beauty and rich history, you can visit the modern Bibliotheca Alexandrina, the Catacombs of Kom El Shoqafa, and the Citadel of Qaitbay.</td>
+            <td><img src="image/Alexandria2.jpg" alt="Alexandria"></td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;">Cities like Sharm El Sheikh and Hurghada provide stunning beaches and water activities such as diving and snorkeling.</td>
+            <td><img src="image/Red Sea Coast.jpg" alt="Red Sea Coast"></td>
+            <td style="padding: 10px;">Located in the Western Desert, this oasis offers unique natural landscapes, natural springs, salt lakes, and a chance to experience local Bedouin culture.</td>
+            <td><img src="image/Siwa Oasis.jpg" alt="Siwa Oasis"></td>
+        </tr>
+    </table>
+</body>
+</html>
