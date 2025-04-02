@@ -1,0 +1,198 @@
+/* CSS Variables for Reusability */
+:root {
+  --primary-bg: #1E2A5E;
+  --text-color: #E1D7B7;
+  --highlight-color: rgb(213, 153, 3);
+  --table-bg: #7C93C3;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+/* General Styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--white);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--highlight-color);
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin: 0 20px 30px;
+}
+
+/* Table Styles */
+table {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: var(--table-bg);
+}
+
+tr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+td {
+  padding: 15px;
+  border: 1px solid var(--white);
+  text-align: left;
+  vertical-align: middle;
+  flex: 1 1 25%;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+/* Text Cells */
+.text-cell {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* Image Cells */
+.image-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-cell img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.image-cell img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  animation: zoomIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--highlight-color);
+}
+
+/* Zoom Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  td {
+    flex: 1 1 50%;
+  }
+
+  .image-cell img {
+    height: 180px;
+  }
+}
+
+/* For tablets (smaller than 768px) */
+@media (max-width: 768px) {
+  td {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .text-cell {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .image-cell img {
+    width: 80%;
+    height: auto;
+    max-height: 200px;
+    margin: 10px auto;
+  }
+}
+
+/* For small phones (smaller than 425px) */
+@media (max-width: 425px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0 15px 20px;
+  }
+
+  td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .image-cell img {
+    width: 90%;
+    max-height: 160px;
+  }
+
+  .modal-close {
+    font-size: 1.5rem;
+    top: 10px;
+    right: 20px;
+  }
+}
